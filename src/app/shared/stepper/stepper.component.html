@@ -1,0 +1,14 @@
+<div class="stepper-wrapper">
+    <ng-container *ngFor="let step of steps; let i = index">
+        <div class="stepper-item" (click)="selectionChanged(i)">
+            <div class="stepper-color" [class.active]="selectedStepIndex === i"
+                [class.completed]="selectedStepIndex > i">
+                <div class="step-counter mt-4 cursor-pointer"><img src="{{step.photo}}" alt=""></div>
+                <div class="step-name">{{step.name}}</div>
+            </div>
+            <div *ngIf="i < steps.length - 1" class="progress-bar">
+                <div class="progress-fill" [class.completed]="selectedStepIndex > i"></div>
+            </div>
+        </div>
+    </ng-container>
+</div>

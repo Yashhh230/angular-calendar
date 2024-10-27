@@ -1,0 +1,14 @@
+
+<div class="modal-header">
+    <h4 class="modal-title">Hi there!</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismissAll('Cross click')"></button>
+</div>
+<div class="modal-body text-center">
+    <div class="text-center">
+        <google-map [center]="center">
+            <map-marker [position]="center"></map-marker>
+        </google-map>
+    </div>
+</div>
+<div class="modal-footer">
+</div>
